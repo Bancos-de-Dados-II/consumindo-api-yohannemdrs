@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Lembretes</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Adicionar Lembrete</h1>
+      <div class="form">
+        <input type="text" id="titulo" placeholder="Título do lembrete">
+        <textarea id="descricao" placeholder="Descrição do lembrete"></textarea>
+        <select id="tipo">
+          <option value="">Tipo do Lembrete</option>
+          <option value="Pessoal">Pessoal</option>
+          <option value="Profissional">Profissional</option>
+        </select>
+        <button id="btSalvar">Adicionar Lembrete</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h1>Meus Lembretes</h1>
+      <div class="filtros">
+        <button onclick="filtrarTarefas('Todas')">Todas</button>
+        <button onclick="filtrarTarefas('Pessoal')">Pessoais</button>
+        <button onclick="filtrarTarefas('Profissional')">Profissionais</button>
+      </div>
+      <ul id="taskList" class="task-list"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
